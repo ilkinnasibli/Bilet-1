@@ -1,0 +1,20 @@
+﻿@model Post
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Shared/_Layout.cshtml";
+}
+<h1>Delete</h1>
+
+<div class="col-6 mt-3">
+	<p></p>
+	<p>Photo: <img src="~/images/@Model.Photo" height="100px" /><br /><br /></p>
+	<h3>Title :</h3><p>@Model.Title  <br /></p>
+	<h3>Description:</h3> <p>@Model.Description <br /></p>
+	<div class="mt-3">
+		<form method="post" class="formdelete">
+			<button class="btn btn-danger deleteButton">Delete</button>
+		</form> 
+	</div>
+	<a class="btn btn-info" asp-action="Index">Back</a>
+</div>
+

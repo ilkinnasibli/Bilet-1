@@ -1,0 +1,39 @@
+﻿@model Post
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Shared/_Layout.cshtml";
+}
+<h1>Update</h1>
+<div class="col-6">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">Update Post</h4>
+			<form class="forms-sample formupdate" method="post" enctype="multipart/form-data">
+
+				<div class="form-group">
+					<label>Photo</label>
+					<input asp-for="Photo" class="form-control" placeholder="Photo">
+					<span class="text-danger" asp-validation-for="Photo"></span>
+				</div>
+
+				<div class="form-group">
+					<label>Title</label>
+					<input asp-for="Title" class="form-control" placeholder="Title">
+					<span class="text-danger" asp-validation-for="Title"></span>
+				</div>
+
+				<div class="form-group">
+					<label>Description</label>
+					<input asp-for="Description" class="form-control" placeholder="Description">
+					<span class="text-danger" asp-validation-for="Description"></span>
+				</div>
+
+				<button class="btn btn-primary mr-2 updatebtn">Submit</button>
+				<a asp-action="Index" class="btn btn-light">Cancel</a>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+
